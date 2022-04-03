@@ -24,8 +24,8 @@ class MyThread(threading.Thread):
     def run(self):
         while True:
             sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            bytes = random._urandom(30174)
-            pack = random._urandom(11180)
+            bytes = random._urandom(1258)
+            pack = random._urandom(1258)
             msg = Pacotes[random.randrange(0, 1)]
             sock.sendto(bytes, (ip, int(port)))
             sock.sendto(pack, (ip, int(port)))
